@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Neovim"
+tags: 
+  - programming 
+  - neovim 
+---
+I like Neovim. I've spent many, _many_ hours configuring it just how I like, so maybe it's a bit of 
+Stockholm Syndrome.
+
+Anyway, if you're interested in how I write my code, look at my [dotfiles](https://github.com/weakphish/dotfiles)
