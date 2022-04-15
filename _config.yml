@@ -42,7 +42,9 @@ remote_theme: zivong/ockham
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
-#
+include:
+  - _pages
+
 # exclude:
 #   - .sass-cache/
 #   - .jekyll-cache/
@@ -54,3 +56,16 @@ remote_theme: zivong/ockham
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+#
+tag_page_layout: tag_page
+tag_page_dir: tag
+
+jekyll-archives:
+  enabled: []
+  layout: archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
