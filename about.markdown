@@ -15,7 +15,7 @@ months and then switch again - hence, the first sentence of this paragraph will 
 now and then :-). I used to view this as a curse, but now I am grateful for the breadth of 
 experiences it has afforded me.
 
-I'm currently serving as the President of HackPack, NCSU's student hacking/cybersecurity group. 
+Last academic year, prior to graduating, I was serving as President of HackPack, NCSU's student hacking/cybersecurity group. 
 This group got me my start in technology, and I am eternally grateful for the opportunity to lead.
 
 This past Summer (2021), I worked at Booz Allen Hamilton developing router security packages! I 
