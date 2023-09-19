@@ -5,11 +5,13 @@ permalink: /about/
 ---
 
 Hi there 👋 I'm John!
-I'm a Site Reliability Engineer at Cisco Systems in Raleigh, North Carolina.
+I'm a Software Engineer at Cisco Systems in Raleigh, North Carolina.
+I work in Cisco's CollabAI doing... well, collaborative AI :)
 
 In my free time, I enjoy:
-- Weight lifting
+- [Sport Climbing](https://en.wikipedia.org/wiki/Sport_climbing)
 - Playing league soccer
+- Amateur DJing / music production
 - [Books](https://www.goodreads.com/user/show/99373945-jack-allison) 
 - [Video games](https://www.ign.com/playlist/weakfish6)
 - [Movies](https://letterboxd.com/john123allison/)
