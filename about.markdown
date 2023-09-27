@@ -6,12 +6,13 @@ permalink: /about/
 
 Hi there 👋 I'm John!
 I'm a Software Engineer at Cisco Systems in Raleigh, North Carolina.
-I work in Cisco's CollabAI doing... well, collaborative AI :)
+I work in Cisco's CollabAI BU doing... well, collaborative AI :)
 
 In my free time, I enjoy:
 - [Sport Climbing](https://en.wikipedia.org/wiki/Sport_climbing)
 - Playing league soccer
-- Amateur DJing / music production
+- [Amateur DJing / music production](https://soundcloud.com/johnedison)
+- Playing the drums (a bit on hold as long as I live in an apartment)
 - [Books](https://www.goodreads.com/user/show/99373945-jack-allison) 
 - [Video games](https://www.ign.com/playlist/weakfish6)
 - [Movies](https://letterboxd.com/john123allison/)
@@ -26,5 +27,7 @@ This group got me my start in technology, and I am eternally grateful for the op
 
 In Summer 2021, I worked at Booz Allen Hamilton developing router security packages! I 
 learned a lot about networking, C++, and Python.
+
+Beginning in January 2024, I will be attending Georgia Tech's Masters of Computer Science, tentatively with a specialization in Systems.
 
 Areas of interest in technology include software and systems, static analysis, and reverse engineering.
