@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ctf on weakphish</title>
+    <link>http://localhost:1313/tags/ctf/</link>
+    <description>Recent content in Ctf on weakphish</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KeyGenMe Writeup</title>
+      <link>http://localhost:1313/posts/2023-04-17-keygenme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2023-04-17-keygenme/</guid>
+      <description>&lt;h1 id=&#34;keygenme-trial&#34;&gt;keygenme-trial&lt;/h1&gt;&#xA;&lt;p&gt;This challenge is from PicoCTF 2021. It&amp;rsquo;s labelled &amp;ldquo;Reverse Engineering,&amp;rdquo; but I&amp;rsquo;d regard it as more PWN since traditional RE involves binaries.&lt;/p&gt;&#xA;&lt;h2 id=&#34;running-the-program&#34;&gt;Running the program&lt;/h2&gt;&#xA;&lt;p&gt;Running the provided program, &lt;code&gt;keygenme-trial.py&lt;/code&gt; , shows us a simple terminal interface for a&amp;hellip; magic program? We can see part of it is &amp;ldquo;locked&amp;rdquo; behind a &amp;ldquo;paywall,&amp;rdquo; which is likely our target. Let&amp;rsquo;s inspect the code!&lt;/p&gt;&#xA;&lt;h2 id=&#34;code-inspection&#34;&gt;Code inspection&lt;/h2&gt;&#xA;&lt;p&gt;At the very top of the python file, we can see a few globals:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

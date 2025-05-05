@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on weakphish</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on weakphish</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 04 May 2025 19:31:55 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/posts/about/</link>
+      <pubDate>Sun, 04 May 2025 19:31:55 -0400</pubDate>
+      <guid>http://localhost:1313/posts/about/</guid>
+      <description>&lt;p&gt;Hi there 👋 I&amp;rsquo;m John!&#xA;I&amp;rsquo;m a Software Engineer at Cisco Systems in Raleigh, North Carolina.&#xA;I work in Cisco&amp;rsquo;s CollabAI organization doing&amp;hellip; well, collaborative AI :) specializing in back-end distributed systems written&#xA;primarily in Python and Java.&lt;/p&gt;&#xA;&lt;p&gt;In my free time, I enjoy:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Playing Ice Hockey&lt;/li&gt;&#xA;&lt;li&gt;Hobbyist video game development (using primarily the Godot engine)&lt;/li&gt;&#xA;&lt;li&gt;Weight training&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.goodreads.com/user/show/99373945-jack-allison&#34;&gt;Books&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.ign.com/playlist/weakfish6&#34;&gt;Video games&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://letterboxd.com/john123allison/&#34;&gt;Movies&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&amp;hellip; and a variety of other random things that pop into my brain.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Prior to graduating from NC State:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
