@@ -1,6 +1,6 @@
 +++
 date = '2025-05-14T17:21:41-04:00'
-draft = true
+draft = false 
 title = 'Dialogue System Part One'
 +++
 
