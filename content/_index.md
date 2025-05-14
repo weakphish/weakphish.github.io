@@ -6,4 +6,3 @@ title = 'The Home Page'
   subtitle = 'The Subtitle'
 +++
 # Hello, world!
-hello
