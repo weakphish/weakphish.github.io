@@ -17,7 +17,7 @@ In my free time, I enjoy:
 - [Books](https://www.goodreads.com/user/show/99373945-jack-allison) 
 - [Video games](https://www.ign.com/playlist/weakfish6)
 - [Movies](https://letterboxd.com/john123allison/)
-- [Music](https://www.last.fm/user/Weakfishy)
+- [Music](https://www.last.fm/user/john123allison)
 - ... and a variety of other random things that pop into my brain. 
 
 Prior to graduating from NC State:
