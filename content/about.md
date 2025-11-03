@@ -10,12 +10,14 @@ I work in Cisco's CollabAI organization doing... well, collaborative AI :) speci
 primarily in Python and Java.
 
 In my free time, I enjoy:
-- Playing Ice Hockey
-- Hobbyist video game development (using primarily the Godot engine)
+- Playing ice hockey
+- Hobbyist programming
+- Warhammer 40k
 - Weight training
 - [Books](https://www.goodreads.com/user/show/99373945-jack-allison) 
 - [Video games](https://www.ign.com/playlist/weakfish6)
 - [Movies](https://letterboxd.com/john123allison/)
+- [Music](https://www.last.fm/user/Weakfishy)
 - ... and a variety of other random things that pop into my brain. 
 
 Prior to graduating from NC State:
