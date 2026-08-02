@@ -4,27 +4,29 @@ draft = false
 title = 'About'
 +++
 
-Hi there 👋 I'm John!
+Hi there 👋 I'm Jack!
+
 I'm a Software Engineer at Cisco Systems in Raleigh, North Carolina.
-I work in Cisco's CollabAI organization doing... well, collaborative AI :) specializing in back-end distributed systems written
-primarily in Python and Java.
+I work in Cisco's Collab organization as a platform software engineer, specializing in building
+infrastructure, metrics and observability, CI/CD, and general computer tomfoolery.
 
 In my free time, I enjoy:
+
 - Playing ice hockey
-- Hobbyist programming
 - Warhammer 40k
+- Hobbyist programming
 - Weight training
-- [Books](https://www.goodreads.com/user/show/99373945-jack-allison) 
+- [Books](https://www.goodreads.com/user/show/99373945-jack-allison)
 - [Video games](https://www.ign.com/playlist/weakfish6)
 - [Movies](https://letterboxd.com/john123allison/)
 - [Music](https://www.last.fm/user/john123allison)
-- ... and a variety of other random things that pop into my brain. 
+- ... and a variety of other random things that pop into my brain.
 
 Prior to graduating from NC State:
 
-- In the 2021-2022 academic year, I served as President of HackPack, NCSU's student hacking/cybersecurity group. 
+- In the 2021-2022 academic year, I served as President of HackPack, NCSU's student hacking/cybersecurity group.
     - This group got me my start in technology, and I am eternally grateful for the opportunity to lead.
 
 - In Summer 2021, I worked at Booz Allen Hamilton developing router security packages! I learned a lot about networking, C++, and Python.
 
-Areas of interest in technology include software and distributed systems, static analysis, and reverse engineering.
+Areas of interest in technology include software and distributed systems, developer tooling, infrastructure, and automation.
