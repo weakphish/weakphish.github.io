@@ -6,7 +6,7 @@ title = 'Uses'
 
 # Digital Tools
 
-_My minor contribution to [uses.tech](https://uses.tech/)
+My _minor_ contribution to [uses.tech](https://uses.tech/)
 
 ## Hardware
 
