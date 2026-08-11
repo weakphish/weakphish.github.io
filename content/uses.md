@@ -100,7 +100,7 @@ compatible with most harnesses.
 
 ---
 
-## Remebering Stuff
+## Remembering Stuff
 
 I loathe the word 'productivity' due to all the weirdo content out there on how to 'optimize your life.'
 
