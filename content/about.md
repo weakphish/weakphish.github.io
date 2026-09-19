@@ -6,9 +6,8 @@ title = 'About'
 
 Hi there 👋 I'm Jack!
 
-I'm a Software Engineer at Cisco Systems in Raleigh, North Carolina.
-I work in Cisco's Collab organization as a platform software engineer, specializing in building
-infrastructure, metrics and observability, CI/CD, and general computer tomfoolery.
+I'm a Software Engineer at Kaleido in Raleigh, North Carolina. I work as a hybrid back-end and platform software engineer, 
+specializing in building infrastructure, metrics and observability, CI/CD, and general computer tomfoolery.
 
 In my free time, I enjoy:
 
