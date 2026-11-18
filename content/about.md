@@ -12,9 +12,9 @@ specializing in building infrastructure, metrics and observability, CI/CD, and g
 In my free time, I enjoy:
 
 - Playing ice hockey
-- Warhammer 40k
+- Miniature painting (mostly Warhammer 40k)
+- Dungeons and Dragons
 - Hobbyist programming
-- Weight training
 - [Books](https://www.goodreads.com/user/show/99373945-jack-allison)
 - [Video games](https://www.ign.com/playlist/weakfish6)
 - [Movies](https://letterboxd.com/john123allison/)
